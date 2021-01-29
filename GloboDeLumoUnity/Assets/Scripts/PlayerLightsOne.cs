@@ -11,6 +11,9 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject
     public GameObject SpotTwo;
     public GameObject TargetTwo;
 
+    public GameObject LevelOneStartTrigger;
+    public GameObject LevelOneLights;
+    public GameObject LevelOneEndTrigger;
     private ColorStates colorState;
 
     public void Beat()
@@ -70,6 +73,19 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject
                 }
             }
         }
+        else if (other.gameObject.tag == "LevelTrigger")
+        {
+            if (other.gameObject == LevelOneStartTrigger)
+            {
+                LevelOneLights.SetActive(true);
+            }
+            if (other.gameObject == LevelOneEndTrigger)
+            {
+                LevelOneLights.SetActive(false);
+                this.enabled = false;
+            }
+        }
+
     }
 
 

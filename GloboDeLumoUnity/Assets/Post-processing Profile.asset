@@ -22,7 +22,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.907
+    value: 0.5
   fastMode:
     overrideState: 0
     value: 0
@@ -53,16 +53,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   intensity:
     overrideState: 1
-    value: 15.56
+    value: 0.2
   threshold:
     overrideState: 1
-    value: 0.9
+    value: 27.1
   softKnee:
     overrideState: 0
     value: 0.567
@@ -70,8 +70,8 @@ MonoBehaviour:
     overrideState: 0
     value: 65472
   diffusion:
-    overrideState: 1
-    value: 6.06
+    overrideState: 0
+    value: 1
   anamorphicRatio:
     overrideState: 0
     value: 0

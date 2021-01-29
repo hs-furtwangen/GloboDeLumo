@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SoundController
   - LevelOneLight
+  - LevelTrigger
   layers:
   - Default
   - TransparentFX
