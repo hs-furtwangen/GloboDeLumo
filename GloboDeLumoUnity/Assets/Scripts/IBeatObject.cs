@@ -1,0 +1,4 @@
+interface IBeatObject
+{
+    void Beat();
+}
