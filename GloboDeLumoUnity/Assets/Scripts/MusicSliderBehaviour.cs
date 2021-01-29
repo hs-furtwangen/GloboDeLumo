@@ -12,7 +12,7 @@ public class MusicSliderBehaviour : MonoBehaviour
     void Start()
     {
         //transform.position = Vector3.zero;
-        transform.localPosition = new Vector3(-2, 14.5f, -18);
+        transform.localPosition = new Vector3(-2, 15.45f, -18);
     }
 
     // Update is called once per frame
