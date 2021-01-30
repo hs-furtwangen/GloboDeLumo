@@ -8,8 +8,10 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
     public GameObject BaseLight;
     public GameObject LightGroup;
     public GameObject SpotOne;
+    private Light SpotOneLight;
     public GameObject TargetOne;
     public GameObject SpotTwo;
+    private Light SpotTwoLight;
     public GameObject TargetTwo;
 
     public GameObject LevelOneStartTrigger;
@@ -18,7 +20,9 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
     private bool active;
     public ColorStates colorState;
 
-
+    public float StartupDuration;
+    public AnimationCurve StartupIntensity;
+    public AnimationCurve StartupAngle;
 
     public void Beat()
     {
@@ -28,6 +32,8 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
     void Start()
     {
         active = false;
+        SpotOneLight = SpotOne.GetComponent<Light>();
+        SpotTwoLight = SpotTwo.GetComponent<Light>();
     }
 
     // Update is called once per frame
@@ -96,14 +102,40 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
 
     public void Startup()
     {
-        LightGroup.SetActive(true);
-        active = true;
+        if (!active)
+        {
+            LightGroup.SetActive(true);
+
+            StartCoroutine(AnimateStartup(StartupDuration));
+
+            active = true;
+        }
     }
 
     public void Shutdown()
     {
-        LightGroup.SetActive(false);
-        active = false;
+        if (active)
+        {
+            LightGroup.SetActive(false);
+            active = false;
+        }
+    }
+
+    IEnumerator AnimateStartup(float duration)
+    {
+        float journey = 0f;
+        while (journey <= duration)
+        {
+            journey = journey + Time.deltaTime;
+            float t = Mathf.Clamp01(journey / duration);
+
+            SpotOneLight.intensity = StartupIntensity.Evaluate(t);
+            SpotTwoLight.intensity = StartupIntensity.Evaluate(t);
+            SpotOneLight.spotAngle = StartupAngle.Evaluate(t);
+            SpotTwoLight.spotAngle = StartupAngle.Evaluate(t);
+
+            yield return null;
+        }
     }
 
     [Flags]

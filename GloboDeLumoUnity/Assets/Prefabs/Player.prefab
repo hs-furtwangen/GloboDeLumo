@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148522955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 391830181}
@@ -458,6 +458,101 @@ MonoBehaviour:
   TargetTwo: {fileID: 0}
   LevelOneStartTrigger: {fileID: 0}
   LevelOneEndTrigger: {fileID: 0}
+  colorState: 0
+  StartupDuration: 3
+  StartupIntensity:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.008068085
+      value: 4.8496895
+      inSlope: 5.2777195
+      outSlope: 5.2777195
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.09878814
+      value: 5.4136467
+      inSlope: 0.037756443
+      outSlope: 0.037756443
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.64786404
+      value: 2.5572405
+      inSlope: 10.806728
+      outSlope: 10.806728
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 12
+      inSlope: 26.815664
+      outSlope: 26.815664
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  StartupAngle:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 100
+      inSlope: -574.3311
+      outSlope: -574.3311
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.12976539
+      value: 25.471697
+      inSlope: -137.87044
+      outSlope: 348.5069
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.023976
+    - serializedVersion: 3
+      time: 0.3681319
+      value: 74.25662
+      inSlope: 13.673951
+      outSlope: 13.673951
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6422177
+      value: 55.290077
+      inSlope: -1.8758166
+      outSlope: 296.33853
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.063553385
+    - serializedVersion: 3
+      time: 1
+      value: 100
+      inSlope: 124.96404
+      outSlope: 124.96404
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1162777862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,7 +560,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3135914956080131112}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc87966baa5b0074f95693ac7be5e6b8, type: 3}
   m_Name: 
@@ -477,7 +572,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3135914956080131112}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cd06b9196daff549af9b5e36406476f, type: 3}
   m_Name: 
