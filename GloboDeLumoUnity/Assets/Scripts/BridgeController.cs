@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorControler : MonoBehaviour
+public class BridgeController : MonoBehaviour
 {
     public PlayerLightsOne.ColorStates[] openingConditions;
     private Animator animator;
@@ -26,14 +26,14 @@ public class DoorControler : MonoBehaviour
             var cntrl = other.transform.parent.GetComponent<PlayerLightsOne>();
             if (isSolved(cntrl))
             {
-                openDoor();
+                riseBridge();
             }
         }
     }
 
-    private void openDoor()
+    private void riseBridge()
     {
-        const string variable = "isOpening";
+        const string variable = "isRising";
         AudioSource audio = GetComponent<AudioSource>();
 
         // Play audio only once
