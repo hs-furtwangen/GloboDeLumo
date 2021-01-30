@@ -5601,10 +5601,6 @@ PrefabInstance:
       propertyPath: LevelOneStartTrigger
       value: 
       objectReference: {fileID: 555335387}
-    - target: {fileID: 2114199650320047977, guid: 23cc42c2e512c754bb25e10f1079d61e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3135914956080131112, guid: 23cc42c2e512c754bb25e10f1079d61e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -7866,10 +7862,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 644280784, guid: 8687758321ef3be4aba1e195ca4f3401, type: 3}
-      propertyPath: beatMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1930210030220958907, guid: 8687758321ef3be4aba1e195ca4f3401, type: 3}
       propertyPath: m_Name
       value: Controllers
