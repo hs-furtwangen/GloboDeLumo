@@ -8,14 +8,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private Vector3 forceDirection;
 
-    public bool PlayerHasControle;
+    private bool active;
 
     private PlayerLightController plc;
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerHasControle = false;
+        active = false;
 
         rb = this.gameObject.GetComponent<Rigidbody>();
         forceDirection = Vector3.zero;
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (PlayerHasControle && rb != null)
+        if (active && rb != null)
         {
             forceDirection.x = Input.GetAxis("Horizontal") * 100;
             forceDirection.y = 0;
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
 
-        PlayerHasControle = true;
+        active = true;
 
         yield return null;
     }
