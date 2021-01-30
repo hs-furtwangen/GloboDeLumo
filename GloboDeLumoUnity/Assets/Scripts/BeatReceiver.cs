@@ -11,19 +11,22 @@ public class BeatReceiver : MonoBehaviour
     // float cooldown = 0.4f;
     // float currentCooldown = 0f;
 
-    IBeatObject beater;
+    IBeatObject[] beater;
 
     void Start()
     {
         beatDetection = GameObject.FindGameObjectWithTag("SoundController").GetComponent<BeatDetection>();
 
-        beater = GetComponent<IBeatObject>();
+        beater = GetComponents<IBeatObject>();
 
         beatDetection.CallBackFunction += OnBeatDetected;
     }
 
     void OnBeatDetected(BeatDetection.EventInfo eventInfo)
     {
-        beater?.Beat();
+        for (int i = 0; i < beater.Length; i++)
+        {
+            beater[i]?.Beat();
+        }
     }
 }

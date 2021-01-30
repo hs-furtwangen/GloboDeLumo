@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelController
 {
@@ -24,8 +25,23 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
     public AnimationCurve StartupIntensity;
     public AnimationCurve StartupAngle;
 
+    private float BaseIntensity;
+    private float BeatIntensityRange = 5;
+    private float BeatIntensity;
+
     public void Beat()
     {
+        if (active)
+        {
+            if (BeatIntensity == BeatIntensityRange)
+            {
+                BeatIntensity = 0;
+            }
+            else
+            {
+                BeatIntensity = BeatIntensityRange;
+            }
+        }
     }
 
     // Start is called before the first frame update
@@ -41,6 +57,9 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
     {
         if (active)
         {
+            SpotOneLight.intensity = BaseIntensity + BeatIntensity;
+            SpotTwoLight.intensity = BaseIntensity + BeatIntensity;
+
             if (SpotOne != null && TargetOne != null)
                 SpotOne.transform.LookAt(TargetOne.transform.position);
 
@@ -133,6 +152,8 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
             SpotTwoLight.intensity = StartupIntensity.Evaluate(t);
             SpotOneLight.spotAngle = StartupAngle.Evaluate(t);
             SpotTwoLight.spotAngle = StartupAngle.Evaluate(t);
+
+            BaseIntensity = SpotOneLight.intensity;
 
             yield return null;
         }

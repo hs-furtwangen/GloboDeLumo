@@ -8,6 +8,7 @@ TagManager:
   - LevelOneLight
   - LevelTrigger
   - LightReset
+  - LevelTwoLight
   layers:
   - Default
   - TransparentFX
