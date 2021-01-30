@@ -16,7 +16,7 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
     public GameObject LevelOneEndTrigger;
     
     private bool active;
-    private ColorStates colorState;
+    public ColorStates colorState;
 
 
 
@@ -107,7 +107,7 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
     }
 
     [Flags]
-    private enum ColorStates
+    public enum ColorStates
     {
         None,
         HasRed,
