@@ -11,6 +11,9 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
     public GameObject TargetTwo;
     public GameObject TargetThree;
 
+    public GameObject LevelTwoStartTrigger;
+    public GameObject LevelTwoEndTrigger;
+
     private GameObject[] Lights;
     public bool active;
 

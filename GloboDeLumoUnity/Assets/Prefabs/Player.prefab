@@ -601,6 +601,8 @@ MonoBehaviour:
   TargetOne: {fileID: 0}
   TargetTwo: {fileID: 0}
   TargetThree: {fileID: 0}
+  LevelTwoStartTrigger: {fileID: 0}
+  LevelTwoEndTrigger: {fileID: 0}
   active: 0
 --- !u!114 &2177216276081195590
 MonoBehaviour:
@@ -619,6 +621,8 @@ MonoBehaviour:
   TargetOne: {fileID: 0}
   TargetTwo: {fileID: 0}
   TargetThree: {fileID: 0}
+  LevelThreeStartTrigger: {fileID: 0}
+  LevelThreeEndTrigger: {fileID: 0}
   active: 0
 --- !u!114 &789232851
 MonoBehaviour:
