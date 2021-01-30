@@ -57,4 +57,12 @@ public class PlayerController : MonoBehaviour
 
         yield return null;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "LightReset")
+        {
+            plc.SetLightToWhite();
+        }
+    }
 }

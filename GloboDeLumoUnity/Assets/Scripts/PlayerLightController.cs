@@ -6,6 +6,8 @@ public class PlayerLightController : MonoBehaviour
 {
     private IPlayerLightLevelController[] playerLightLevelControllers;
 
+    public GameObject BaseLight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +32,11 @@ public class PlayerLightController : MonoBehaviour
         {
             playerLightLevelControllers[i].Shutdown();
         }
+    }
+
+    public void SetLightToWhite()
+    {
+        var light = BaseLight.GetComponent<Light>();
+        light.color = Color.white;
     }
 }
