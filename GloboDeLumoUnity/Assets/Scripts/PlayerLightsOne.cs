@@ -19,7 +19,7 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
     public GameObject LevelOneEndTrigger;
     
     private bool active;
-    public ColorStates colorState;
+    public Helper.ColorStates colorState;
 
     public float StartupDuration;
     public AnimationCurve StartupIntensity;
@@ -77,9 +77,9 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
                 SpotOne.SetActive(false);
                 TargetOne.SetActive(false);
 
-                colorState |= ColorStates.HasRed;
+                colorState |= Helper.ColorStates.HasRed;
 
-                if (colorState.HasFlag(ColorStates.HasBlue))
+                if (colorState.HasFlag(Helper.ColorStates.HasBlue))
                 {
                     BaseLight.GetComponent<Light>().color = new Color(1, 0, 1);
                 }
@@ -159,11 +159,5 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
         }
     }
 
-    [Flags]
-    public enum ColorStates
-    {
-        None,
-        HasRed,
-        HasBlue
-    }
+
 }
