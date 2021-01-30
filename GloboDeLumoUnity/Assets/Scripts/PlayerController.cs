@@ -8,17 +8,26 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private Vector3 forceDirection;
 
+    public bool PlayerHasControle;
+
+    private PlayerLightController plc;
+
     // Start is called before the first frame update
     void Start()
     {
+        PlayerHasControle = false;
+
         rb = this.gameObject.GetComponent<Rigidbody>();
         forceDirection = Vector3.zero;
+        plc = this.gameObject.GetComponent<PlayerLightController>();
+
+        StartCoroutine(GiveControl());
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (rb != null)
+        if (PlayerHasControle && rb != null)
         {
             forceDirection.x = Input.GetAxis("Horizontal") * 100;
             forceDirection.y = 0;
@@ -34,5 +43,18 @@ public class PlayerController : MonoBehaviour
 
             rb.AddForce(forceDirection);
         }
+    }
+
+    IEnumerator GiveControl()
+    {
+        yield return new WaitForSeconds(6f);
+
+        plc.StartupLightForLevel(0);
+
+        yield return new WaitForSeconds(3f);
+
+        PlayerHasControle = true;
+
+        yield return null;
     }
 }
