@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController
+public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController
 {
     public void Shutdown()
     {

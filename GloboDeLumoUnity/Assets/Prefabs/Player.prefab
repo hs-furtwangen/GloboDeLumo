@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &148522956
 Transform:
   m_ObjectHideFlags: 0
@@ -75,7 +75,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 2
+  m_Intensity: 12
   m_Range: 10
   m_SpotAngle: 100
   m_InnerSpotAngle: 1
@@ -168,7 +168,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0, g: 0, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 12
   m_Range: 10
   m_SpotAngle: 100
   m_InnerSpotAngle: 1
@@ -229,7 +229,11 @@ GameObject:
   - component: {fileID: 3135914956080131118}
   - component: {fileID: 3135914956080131119}
   - component: {fileID: 3135914956080131117}
+  - component: {fileID: 7139468139659788178}
+  - component: {fileID: 2239173511979338206}
   - component: {fileID: 1848546734}
+  - component: {fileID: 1162777862}
+  - component: {fileID: 2177216276081195590}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -246,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 3135914956080131112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.96, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 3135914956678253189}
   - {fileID: 5229159111073130271}
@@ -281,6 +285,159 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774d082324eb43d41a2cb883cc62a664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerHasControle: 0
+--- !u!114 &7139468139659788178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135914956080131112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22ab93a050e3b9449c84358a7df632e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2239173511979338206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135914956080131112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a931d6b6bf95e14e882681c18069f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseLight: {fileID: 3135914957461624907}
+  StartupDuration: 3
+  StartupIntensity:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.032531537
+      value: 0.7852546
+      inSlope: 1.7047445
+      outSlope: 1.7047445
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.07563543
+      value: 0.27208757
+      inSlope: 0.8492599
+      outSlope: 0.8492599
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  StartupRotX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 90
+      inSlope: 207.07268
+      outSlope: 207.07268
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.17212313
+      value: 125.642
+      inSlope: -64.50352
+      outSlope: -64.50352
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.306962
+      value: 80.325386
+      inSlope: -161.06
+      outSlope: -161.06
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 90
+      inSlope: 13.959717
+      outSlope: 13.959717
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  StartupRotZ:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -125.015236
+      outSlope: -125.015236
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.17495576
+      value: -21.872135
+      inSlope: 87.853745
+      outSlope: 87.853745
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5219246
+      value: 82.469284
+      inSlope: 64.11002
+      outSlope: 64.11002
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -172.50267
+      outSlope: -172.50267
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1848546734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,10 +451,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseLight: {fileID: 3135914957461624907}
+  LightGroup: {fileID: 148522955}
   SpotOne: {fileID: 391830180}
   TargetOne: {fileID: 0}
   SpotTwo: {fileID: 1197630955}
   TargetTwo: {fileID: 0}
+  LevelOneStartTrigger: {fileID: 0}
+  LevelOneEndTrigger: {fileID: 0}
+--- !u!114 &1162777862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135914956080131112}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc87966baa5b0074f95693ac7be5e6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2177216276081195590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135914956080131112}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd06b9196daff549af9b5e36406476f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3135914956678253190
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +542,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cea013d791c014144a33657c09ef6a3e, type: 2}
+  - {fileID: 2100000, guid: f9ae9001ee5025c439d7bc2010e1feeb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -436,7 +620,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.6
+  m_Intensity: 2.07
   m_Range: 10
   m_SpotAngle: 160
   m_InnerSpotAngle: 1
