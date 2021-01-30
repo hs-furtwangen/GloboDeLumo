@@ -38,12 +38,16 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
 
     public void Shutdown()
     {
-
+        LightGroup.SetActive(false);
+        BaseLight.GetComponent<Light>().color = Color.white;
+        active = false;
     }
 
     public void Startup()
     {
-
+        LightGroup.SetActive(true);
+        BaseLight.GetComponent<Light>().color = Color.white;
+        active = true;
     }
 
     // Start is called before the first frame update
@@ -106,8 +110,36 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
 
                 light.intensity = BaseIntensity + BeatIntensity;
             }
+        }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "LevelOneLight")
+        {
+            if (other.gameObject == TargetOne)
+            {
 
+            }
+            else if (other.gameObject == TargetTwo)
+            {
+
+            }
+            else if (other.gameObject == TargetThree)
+            {
+
+            }
+        }
+        else if (other.gameObject.tag == "LevelTrigger")
+        {
+            if (other.gameObject == LevelTwoStartTrigger)
+            {
+                Startup();
+            }
+            if (other.gameObject == LevelTwoEndTrigger)
+            {
+                Shutdown();
+            }
         }
     }
 }

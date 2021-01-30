@@ -16,6 +16,7 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
 
     private GameObject[] Lights;
     public bool active;
+    public bool rotate;
 
     private float BaseIntensity = 10;
     private float BeatIntensityRange = 5;
@@ -24,18 +25,22 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
 
     public void Shutdown()
     {
-
+        rotate = true;
+        BaseLight.GetComponent<Light>().intensity = 0;
     }
 
     public void Startup()
     {
-
+        LightGroup.SetActive(true);
+        BaseLight.GetComponent<Light>().color = Color.white;
+        active = true;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         active = false;
+        rotate = false;
         Lights = new GameObject[32];
 
         var angle = 360f / Lights.Length;
@@ -100,7 +105,10 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
                 }
             }
 
-
+            if (rotate)
+            {
+                LightGroup.transform.Rotate(Vector3.up * Time.deltaTime * 35);
+            }
         }
     }
 
@@ -117,6 +125,36 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
             {
                 BeatIntensity1 = BeatIntensityRange;
                 BeatIntensity2 = 0;
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "LevelOneLight")
+        {
+            if (other.gameObject == TargetOne)
+            {
+
+            }
+            else if (other.gameObject == TargetTwo)
+            {
+
+            }
+            else if (other.gameObject == TargetThree)
+            {
+
+            }
+        }
+        else if (other.gameObject.tag == "LevelTrigger")
+        {
+            if (other.gameObject == LevelThreeStartTrigger)
+            {
+                Startup();
+            }
+            if (other.gameObject == LevelThreeEndTrigger)
+            {
+                Shutdown();
             }
         }
     }
