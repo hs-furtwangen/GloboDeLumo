@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorControler : MonoBehaviour
 {
-    public PlayerLightsOne.ColorStates[] openingConditions;
+    public Helper.ColorStates[] openingConditions;
     private Animator animator;
 
     // Start is called before the first frame update
@@ -47,7 +47,7 @@ public class DoorControler : MonoBehaviour
     // Check if conditions are met
     private bool isSolved(PlayerLightsOne player)
     {
-        foreach (PlayerLightsOne.ColorStates condition in openingConditions)
+        foreach (Helper.ColorStates condition in openingConditions)
         {
             if (!player.colorState.HasFlag(condition))
             {

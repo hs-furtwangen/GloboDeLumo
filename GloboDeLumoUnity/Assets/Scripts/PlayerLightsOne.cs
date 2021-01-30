@@ -93,9 +93,9 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
                 SpotTwo.SetActive(false);
                 TargetTwo.SetActive(false);
 
-                colorState |= ColorStates.HasBlue;
+                colorState |= Helper.ColorStates.HasBlue;
 
-                if (colorState.HasFlag(ColorStates.HasRed))
+                if (colorState.HasFlag(Helper.ColorStates.HasRed))
                 {
                     BaseLight.GetComponent<Light>().color = new Color(1, 0, 1);
                 }
