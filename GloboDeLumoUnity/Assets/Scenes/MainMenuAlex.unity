@@ -5601,6 +5601,18 @@ PrefabInstance:
       propertyPath: LevelOneStartTrigger
       value: 
       objectReference: {fileID: 555335387}
+    - target: {fileID: 2177216276081195590, guid: 23cc42c2e512c754bb25e10f1079d61e, type: 3}
+      propertyPath: TargetOne
+      value: 
+      objectReference: {fileID: 6172079838815724543}
+    - target: {fileID: 2177216276081195590, guid: 23cc42c2e512c754bb25e10f1079d61e, type: 3}
+      propertyPath: TargetTwo
+      value: 
+      objectReference: {fileID: 6780158070277126384}
+    - target: {fileID: 2177216276081195590, guid: 23cc42c2e512c754bb25e10f1079d61e, type: 3}
+      propertyPath: TargetThree
+      value: 
+      objectReference: {fileID: 1712059466596715760}
     - target: {fileID: 3135914956080131112, guid: 23cc42c2e512c754bb25e10f1079d61e, type: 3}
       propertyPath: m_Name
       value: Player

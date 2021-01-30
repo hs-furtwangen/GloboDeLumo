@@ -11,13 +11,26 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
     public GameObject TargetTwo;
     public GameObject TargetThree;
 
-    private float BaseIntensity;
     private GameObject[] Lights;
     public bool active;
 
+    private float BaseIntensity = 10;
+    private float BeatIntensityRange = 5;
+    private float BeatIntensity;
+
     public void Beat()
     {
-
+        if (active)
+        {
+            if (BeatIntensity == BeatIntensityRange)
+            {
+                BeatIntensity = 0;
+            }
+            else
+            {
+                BeatIntensity = BeatIntensityRange;
+            }
+        }
     }
 
     public void Shutdown()
@@ -55,6 +68,7 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
             comp.type = LightType.Spot;
             comp.intensity = 10;
             comp.spotAngle = 30;
+            comp.range = 20;
 
             Lights[i] = go;
         }
@@ -86,6 +100,8 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
                 var color = new Color(colorVector.x, colorVector.y, colorVector.z, 1);
 
                 light.color = color;
+
+                light.intensity = BaseIntensity + BeatIntensity;
             }
 
 

@@ -26,6 +26,25 @@ MonoBehaviour:
   fastMode:
     overrideState: 0
     value: 0
+--- !u!114 &-1416323561423218806
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859b2b7371ff25b43a1a146c6895f283, type: 3}
+  m_Name: Pixelationv2
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  BlockCount:
+    overrideState: 1
+    value: 512
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,6 +60,36 @@ MonoBehaviour:
   settings:
   - {fileID: -4237528221405225157}
   - {fileID: 8410345531643678443}
+  - {fileID: 5100357649030017562}
+  - {fileID: -1416323561423218806}
+--- !u!114 &5100357649030017562
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
+  m_Name: Grain
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  colored:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 0.343
+  size:
+    overrideState: 1
+    value: 1.65
+  lumContrib:
+    overrideState: 0
+    value: 1
 --- !u!114 &8410345531643678443
 MonoBehaviour:
   m_ObjectHideFlags: 3
