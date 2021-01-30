@@ -624,6 +624,7 @@ MonoBehaviour:
   LevelThreeStartTrigger: {fileID: 0}
   LevelThreeEndTrigger: {fileID: 0}
   active: 0
+  rotate: 0
 --- !u!114 &789232851
 MonoBehaviour:
   m_ObjectHideFlags: 0

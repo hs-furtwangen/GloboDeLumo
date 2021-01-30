@@ -591,10 +591,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3135914956080131112, guid: 23cc42c2e512c754bb25e10f1079d61e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3135914956080131118, guid: 23cc42c2e512c754bb25e10f1079d61e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -663,6 +659,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 233343240801463543, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820092019351877719, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
+      propertyPath: m_TagString
+      value: LevelTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491598051002223740, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7446695000864883691, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -710,6 +718,10 @@ PrefabInstance:
     - target: {fileID: 7446695000864883692, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
       propertyPath: m_Name
       value: Room_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7719516261332577701, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
+      propertyPath: m_TagString
+      value: LevelTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 8755326527964532858, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
       propertyPath: m_Range
@@ -898,6 +910,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5124762211929914398, guid: 9a68a2b295681294e82a405ce725f33a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479237801907071113, guid: 9a68a2b295681294e82a405ce725f33a, type: 3}
+      propertyPath: m_TagString
+      value: LevelTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138066420312747054, guid: 9a68a2b295681294e82a405ce725f33a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8086188867737025721, guid: 9a68a2b295681294e82a405ce725f33a, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -945,6 +969,10 @@ PrefabInstance:
     - target: {fileID: 8086188867737025726, guid: 9a68a2b295681294e82a405ce725f33a, type: 3}
       propertyPath: m_Name
       value: Room_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151609816720109567, guid: 9a68a2b295681294e82a405ce725f33a, type: 3}
+      propertyPath: m_TagString
+      value: LevelTrigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a68a2b295681294e82a405ce725f33a, type: 3}
