@@ -375,7 +375,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 2.5
+      value: 1.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -495,37 +495,37 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.008068085
-      value: 4.8496895
-      inSlope: 5.2777195
-      outSlope: 5.2777195
+      time: 0
+      value: 1
+      inSlope: 7.002351
+      outSlope: 7.002351
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.09878814
-      value: 5.4136467
-      inSlope: 0.037756443
-      outSlope: 0.037756443
+      time: 0.10055816
+      value: 1.7041435
+      inSlope: 2.8439534
+      outSlope: 2.8439534
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.64786404
-      value: 2.5572405
-      inSlope: 10.806728
-      outSlope: 10.806728
+      time: 0.62741727
+      value: 1.0116167
+      inSlope: -0.001819551
+      outSlope: -0.001819551
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 12
-      inSlope: 26.815664
-      outSlope: 26.815664
+      value: 1.5
+      inSlope: 1.310805
+      outSlope: 1.310805
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -584,6 +584,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  BeatIntensityVariance: 1
 --- !u!114 &1162777862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,6 +606,7 @@ MonoBehaviour:
   LevelTwoEndTrigger: {fileID: 0}
   active: 0
   colorState: 0
+  BeatIntensityVariance: 1
 --- !u!114 &2177216276081195590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,6 +629,7 @@ MonoBehaviour:
   active: 0
   rotate: 0
   colorState: 0
+  BeatIntensityVariance: 1
 --- !u!114 &789232851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,7 +782,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3
-  m_Range: 8.7
+  m_Range: 3
   m_SpotAngle: 160
   m_InnerSpotAngle: 1
   m_CookieSize: 10
