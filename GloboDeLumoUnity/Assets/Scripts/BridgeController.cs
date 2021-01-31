@@ -7,12 +7,23 @@ public class BridgeController : MonoBehaviour
 {
     public Helper.ColorStates[] openingConditions;
     private Animator animator;
+    private IPlayerLightLevelController[] iplc;
+
+    public int LevelSelect0r;
+
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         transform.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material.DisableKeyword("_EMISSION"));
+
+        iplc = new IPlayerLightLevelController[4];
+        iplc[0] = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLightsMainmenu>();
+        iplc[1] = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLightsOne>();
+        iplc[2] = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLightsTwo>();
+        iplc[3] = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLightsThree>();
+
     }
 
     // Update is called once per frame
@@ -25,8 +36,7 @@ public class BridgeController : MonoBehaviour
     {
         if (other.transform.parent.tag == "Player")
         {
-            var cntrl = other.transform.parent.GetComponent<PlayerLightsOne>();
-            if (isSolved(cntrl))
+            if (isSolved())
             {
                 riseBridge();
             }
@@ -51,11 +61,11 @@ public class BridgeController : MonoBehaviour
     }
 
     // Check if conditions are met
-    private bool isSolved(PlayerLightsOne player)
+    private bool isSolved()
     {
         foreach (Helper.ColorStates condition in openingConditions)
         {
-            if (!player.colorState.HasFlag(condition))
+            if (!iplc[LevelSelect0r].GetColorState().HasFlag(condition))
             {
                 return false;
             }

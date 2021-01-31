@@ -1,4 +1,4 @@
-interface IPlayerLightLevelController
+public interface IPlayerLightLevelController
 {
     public void Startup();
     public void Shutdown();
