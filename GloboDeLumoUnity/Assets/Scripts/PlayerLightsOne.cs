@@ -26,20 +26,20 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
     public AnimationCurve StartupAngle;
 
     private float BaseIntensity;
-    private float BeatIntensityRange = 5;
+    public float BeatIntensityVariance;
     private float BeatIntensity;
 
     public void Beat()
     {
         if (active)
         {
-            if (BeatIntensity == BeatIntensityRange)
+            if (BeatIntensity == BeatIntensityVariance)
             {
                 BeatIntensity = 0;
             }
             else
             {
-                BeatIntensity = BeatIntensityRange;
+                BeatIntensity = BeatIntensityVariance;
             }
         }
     }

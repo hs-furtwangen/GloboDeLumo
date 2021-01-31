@@ -19,21 +19,21 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
 
     public Helper.ColorStates colorState;
 
-    private float BaseIntensity = 10;
-    private float BeatIntensityRange = 5;
+    private float BaseIntensity = 2;
+    public float BeatIntensityVariance;
     private float BeatIntensity;
 
     public void Beat()
     {
         if (active)
         {
-            if (BeatIntensity == BeatIntensityRange)
+            if (BeatIntensity == BeatIntensityVariance)
             {
                 BeatIntensity = 0;
             }
             else
             {
-                BeatIntensity = BeatIntensityRange;
+                BeatIntensity = BeatIntensityVariance;
             }
         }
     }
@@ -78,6 +78,9 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
             comp.intensity = 10;
             comp.spotAngle = 30;
             comp.range = 20;
+            comp.shadows = LightShadows.Hard;
+            comp.shadowBias = 0.01f;
+            comp.shadowNearPlane = 0.1f;
 
             Lights[i] = go;
         }

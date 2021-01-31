@@ -20,8 +20,8 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
 
         public Helper.ColorStates colorState;
 
-    private float BaseIntensity = 10;
-    private float BeatIntensityRange = 5;
+    private float BaseIntensity = 2;
+    public float BeatIntensityVariance;
     private float BeatIntensity1;
     private float BeatIntensity2;
 
@@ -65,6 +65,9 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
             comp.intensity = 10;
             comp.spotAngle = 10;
             comp.range = 20;
+            comp.shadows = LightShadows.Hard;
+            comp.shadowBias = 0.01f;
+            comp.shadowNearPlane = 0.1f;
 
             Lights[i] = go;
         }
@@ -118,14 +121,14 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
     {
         if (active)
         {
-            if (BeatIntensity1 == BeatIntensityRange)
+            if (BeatIntensity1 == BeatIntensityVariance)
             {
                 BeatIntensity1 = 0;
-                BeatIntensity2 = BeatIntensityRange;
+                BeatIntensity2 = BeatIntensityVariance;
             }
             else
             {
-                BeatIntensity1 = BeatIntensityRange;
+                BeatIntensity1 = BeatIntensityVariance;
                 BeatIntensity2 = 0;
             }
         }
