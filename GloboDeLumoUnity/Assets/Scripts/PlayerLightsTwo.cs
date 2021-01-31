@@ -28,6 +28,11 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
 
     private LevelDj levelDj;
 
+    public void ResetColorState()
+    {
+        colorState = Helper.ColorStates.None;
+    }
+
     public void Beat()
     {
         if (active)

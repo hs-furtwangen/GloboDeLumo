@@ -38,5 +38,9 @@ public class PlayerLightController : MonoBehaviour
     {
         var light = BaseLight.GetComponent<Light>();
         light.color = Color.white;
+        foreach(var llc in playerLightLevelControllers)
+        {
+            llc?.ResetColorState();
+        }
     }
 }

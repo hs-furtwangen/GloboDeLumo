@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BridgeController : MonoBehaviour
 {
-    public Helper.ColorStates[] openingConditions;
+    public Helper.ColorStates openingConditions;
     private Animator animator;
     private IPlayerLightLevelController[] iplc;
 
@@ -61,17 +61,6 @@ public class BridgeController : MonoBehaviour
     }
 
     // Check if conditions are met
-    private bool isSolved()
-    {
-        foreach (Helper.ColorStates condition in openingConditions)
-        {
-            if (!iplc[LevelSelect0r].GetColorState().HasFlag(condition))
-            {
-                return false;
-            }
-
-        }
-
-        return true;
-    }
+    private bool isSolved() => openingConditions == iplc[LevelSelect0r].GetColorState();
+   
 }
