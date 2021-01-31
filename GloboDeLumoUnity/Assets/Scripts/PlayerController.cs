@@ -35,12 +35,6 @@ public class PlayerController : MonoBehaviour
 
             Vector3.ClampMagnitude(forceDirection, 0.7f);
 
-            if (Physics.Raycast(transform.position, -Vector3.up, 1.05f))
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                    forceDirection.y = 200;
-            }
-
             rb.AddForce(forceDirection);
         }
     }
