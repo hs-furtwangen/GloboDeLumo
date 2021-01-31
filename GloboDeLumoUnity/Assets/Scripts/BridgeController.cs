@@ -61,6 +61,15 @@ public class BridgeController : MonoBehaviour
     }
 
     // Check if conditions are met
-    private bool isSolved() => openingConditions == iplc[LevelSelect0r].GetColorState();
+    private bool isSolved()
+    {
+        if (openingConditions.HasFlag(Helper.ColorStates.HasRed) == iplc[LevelSelect0r].GetColorState().HasFlag(Helper.ColorStates.HasRed) &&
+            openingConditions.HasFlag(Helper.ColorStates.HasGreen) == iplc[LevelSelect0r].GetColorState().HasFlag(Helper.ColorStates.HasGreen) &&
+            openingConditions.HasFlag(Helper.ColorStates.HasBlue) == iplc[LevelSelect0r].GetColorState().HasFlag(Helper.ColorStates.HasBlue))
+        {
+            return true;
+        }
+        return false;
+    }
    
 }
