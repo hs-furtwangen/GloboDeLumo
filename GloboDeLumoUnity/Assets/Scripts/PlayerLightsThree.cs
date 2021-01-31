@@ -39,9 +39,9 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
 
             levelDj.FadeOutCurrentSong();
 
-            if (BlockersOnStartup.Length != 0)
+            if (BlockersOnShutdown.Length != 0)
             {
-                foreach (var block in BlockersOnStartup)
+                foreach (var block in BlockersOnShutdown)
                 {
                     if (block != null)
                         block.transform.position = Vector3.zero;
@@ -60,9 +60,9 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
 
             levelDj.StartSongForLevel(3);
 
-            if (BlockersOnShutdown.Length != 0)
+            if (BlockersOnStartup.Length != 0)
             {
-                foreach (var block in BlockersOnShutdown)
+                foreach (var block in BlockersOnStartup)
                 {
                     if (block != null)
                         block.transform.position = Vector3.zero;
