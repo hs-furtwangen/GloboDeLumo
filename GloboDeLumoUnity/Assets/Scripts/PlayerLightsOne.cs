@@ -29,6 +29,8 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
     public float BeatIntensityVariance;
     private float BeatIntensity;
 
+    private LevelDj levelDj;
+
     public void Beat()
     {
         if (active)
@@ -50,6 +52,7 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
         active = false;
         SpotOneLight = SpotOne.GetComponent<Light>();
         SpotTwoLight = SpotTwo.GetComponent<Light>();
+        levelDj = GameObject.FindGameObjectWithTag("SoundController").GetComponent<LevelDj>();
     }
 
     // Update is called once per frame
@@ -128,6 +131,8 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
             StartCoroutine(AnimateStartup(StartupDuration));
 
             active = true;
+
+            levelDj.StartSongForLevel(1);
         }
     }
 
@@ -137,6 +142,8 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
         {
             LightGroup.SetActive(false);
             active = false;
+
+            levelDj.FadeOutCurrentSong();
         }
     }
 

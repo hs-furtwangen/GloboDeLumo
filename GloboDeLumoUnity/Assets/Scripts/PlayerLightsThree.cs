@@ -25,17 +25,29 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
     private float BeatIntensity1;
     private float BeatIntensity2;
 
+    private LevelDj levelDj;
+
     public void Shutdown()
     {
-        rotate = true;
-        BaseLight.GetComponent<Light>().intensity = 0;
+        if (active)
+        {
+            rotate = true;
+            BaseLight.GetComponent<Light>().intensity = 0;
+
+            levelDj.FadeOutCurrentSong();
+        }
     }
 
     public void Startup()
     {
-        LightGroup.SetActive(true);
-        BaseLight.GetComponent<Light>().color = Color.white;
-        active = true;
+        if (!active)
+        {
+            LightGroup.SetActive(true);
+            BaseLight.GetComponent<Light>().color = Color.white;
+            active = true;
+
+            levelDj.StartSongForLevel(3);
+        }
     }
 
     // Start is called before the first frame update
@@ -47,6 +59,8 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
 
         var angle = 360f / Lights.Length;
         var radius = 0.1f;
+
+        levelDj = GameObject.FindGameObjectWithTag("SoundController").GetComponent<LevelDj>();
 
         for (int i = 0; i < Lights.Length; i++)
         {

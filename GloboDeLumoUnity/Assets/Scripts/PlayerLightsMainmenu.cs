@@ -13,11 +13,15 @@ public class PlayerLightsMainmenu : MonoBehaviour, IPlayerLightLevelController
     public AnimationCurve StartupRotX;
     public AnimationCurve StartupRotZ;
 
+    private LevelDj levelDj;
+
     public void Start()
     {
         baseLightLight = BaseLight.GetComponent<Light>();
         baseLightLight.intensity = 0;
         baseLightTransform = BaseLight.transform;
+
+        levelDj = GameObject.FindGameObjectWithTag("SoundController").GetComponent<LevelDj>();
     }
 
     public void Startup()
