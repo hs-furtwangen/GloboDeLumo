@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BridgeController : MonoBehaviour
@@ -11,6 +12,7 @@ public class BridgeController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        transform.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material.DisableKeyword("_EMISSION"));
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class BridgeController : MonoBehaviour
 
     private void riseBridge()
     {
+
         const string variable = "isRising";
         AudioSource audio = GetComponent<AudioSource>();
 
@@ -42,6 +45,9 @@ public class BridgeController : MonoBehaviour
             audio.Play();
         }
         animator.SetBool(variable, true);
+
+        transform.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material.EnableKeyword("_EMISSION"));
+
     }
 
     // Check if conditions are met
