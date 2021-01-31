@@ -604,6 +604,7 @@ MonoBehaviour:
   LevelTwoStartTrigger: {fileID: 0}
   LevelTwoEndTrigger: {fileID: 0}
   active: 0
+  colorState: 0
 --- !u!114 &2177216276081195590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,6 +626,7 @@ MonoBehaviour:
   LevelThreeEndTrigger: {fileID: 0}
   active: 0
   rotate: 0
+  colorState: 0
 --- !u!114 &789232851
 MonoBehaviour:
   m_ObjectHideFlags: 0

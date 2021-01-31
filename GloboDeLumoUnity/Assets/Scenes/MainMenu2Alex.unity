@@ -193,6 +193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5781a1245bd4eda48b312390f2b690cc, type: 3}
+--- !u!1 &380529056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4111059411182090965, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
+  m_PrefabInstance: {fileID: 1631389270523793566}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &385100473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -499,20 +504,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1643752539721580635, guid: c1f765cfdd7f4a64f9e0124411e03155, type: 3}
   m_PrefabInstance: {fileID: 1643752538644202921}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1112366078 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8264699004198822655, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
-  m_PrefabInstance: {fileID: 1631389270523793566}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1245712882 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 333139842014787111, guid: 9a68a2b295681294e82a405ce725f33a, type: 3}
   m_PrefabInstance: {fileID: 8086188867137365453}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1339814176 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1224105325965508777, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
-  m_PrefabInstance: {fileID: 1631389270523793566}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1372016602 stripped
 GameObject:
@@ -538,11 +533,11 @@ PrefabInstance:
     - target: {fileID: 1162777862, guid: 23cc42c2e512c754bb25e10f1079d61e, type: 3}
       propertyPath: TargetTwo
       value: 
-      objectReference: {fileID: 1339814176}
+      objectReference: {fileID: 380529056}
     - target: {fileID: 1162777862, guid: 23cc42c2e512c754bb25e10f1079d61e, type: 3}
       propertyPath: TargetThree
       value: 
-      objectReference: {fileID: 1112366078}
+      objectReference: {fileID: 1911549705}
     - target: {fileID: 1162777862, guid: 23cc42c2e512c754bb25e10f1079d61e, type: 3}
       propertyPath: LevelTwoEndTrigger
       value: 
@@ -640,6 +635,11 @@ PrefabInstance:
 --- !u!1 &1645022633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7719516261332577701, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
+  m_PrefabInstance: {fileID: 1631389270523793566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1911549705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 321662885229586787, guid: 878dfe848b32ce54bb5d76bf306e9e0f, type: 3}
   m_PrefabInstance: {fileID: 1631389270523793566}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2010182901 stripped

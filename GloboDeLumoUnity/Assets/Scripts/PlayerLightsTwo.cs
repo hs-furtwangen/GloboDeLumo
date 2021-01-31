@@ -17,6 +17,8 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
     private GameObject[] Lights;
     public bool active;
 
+    public Helper.ColorStates colorState;
+
     private float BaseIntensity = 10;
     private float BeatIntensityRange = 5;
     private float BeatIntensity;
@@ -119,15 +121,70 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
         {
             if (other.gameObject == TargetOne)
             {
+                colorState |= Helper.ColorStates.HasRed;
 
+                if (colorState.HasFlag(Helper.ColorStates.HasGreen | Helper.ColorStates.HasBlue))
+                {
+                    BaseLight.GetComponent<Light>().color = Color.white;
+                    colorState = Helper.ColorStates.None;
+                }
+                else if (colorState.HasFlag(Helper.ColorStates.HasGreen))
+                {
+                    BaseLight.GetComponent<Light>().color = Color.yellow;
+                }
+                else if (colorState.HasFlag(Helper.ColorStates.HasBlue))
+                {
+                    BaseLight.GetComponent<Light>().color = Color.magenta;
+                }
+                else
+                {
+                    BaseLight.GetComponent<Light>().color = Color.red;
+                }
             }
             else if (other.gameObject == TargetTwo)
             {
+                colorState |= Helper.ColorStates.HasGreen;
+
+                if (colorState.HasFlag(Helper.ColorStates.HasRed | Helper.ColorStates.HasBlue))
+                {
+                    BaseLight.GetComponent<Light>().color = Color.white;
+                    colorState = Helper.ColorStates.None;
+                }
+                else if (colorState.HasFlag(Helper.ColorStates.HasRed))
+                {
+                    BaseLight.GetComponent<Light>().color = Color.yellow;
+                }
+                else if (colorState.HasFlag(Helper.ColorStates.HasBlue))
+                {
+                    BaseLight.GetComponent<Light>().color = Color.cyan;
+                }
+                else
+                {
+                    BaseLight.GetComponent<Light>().color = Color.green;
+                }
 
             }
             else if (other.gameObject == TargetThree)
             {
+                colorState |= Helper.ColorStates.HasBlue;
 
+                if (colorState.HasFlag(Helper.ColorStates.HasGreen | Helper.ColorStates.HasRed))
+                {
+                    BaseLight.GetComponent<Light>().color = Color.white;
+                    colorState = Helper.ColorStates.None;
+                }
+                else if (colorState.HasFlag(Helper.ColorStates.HasGreen))
+                {
+                    BaseLight.GetComponent<Light>().color = Color.cyan;
+                }
+                else if (colorState.HasFlag(Helper.ColorStates.HasRed))
+                {
+                    BaseLight.GetComponent<Light>().color = Color.magenta;
+                }
+                else
+                {
+                    BaseLight.GetComponent<Light>().color = Color.blue;
+                }
             }
         }
         else if (other.gameObject.tag == "LevelTrigger")

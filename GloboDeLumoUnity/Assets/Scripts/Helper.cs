@@ -10,9 +10,9 @@ using System.Threading.Tasks;
     [Flags]
     public enum ColorStates
     {
-        None,
-        HasRed,
-        HasBlue,
-        HasGreen
+        None = 0x01,
+        HasRed = 0x02,
+        HasBlue = 0x04,
+        HasGreen = 0x08
     }
 }
