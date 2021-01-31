@@ -30,7 +30,7 @@ public class PlayerLightsTwo : MonoBehaviour, IPlayerLightLevelController, IBeat
 
     public void ResetColorState()
     {
-        colorState = Helper.ColorStates.None;
+        colorState = 0;
     }
 
     public void Beat()

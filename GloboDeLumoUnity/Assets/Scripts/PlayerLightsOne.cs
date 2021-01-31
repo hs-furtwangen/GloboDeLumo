@@ -194,6 +194,6 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
 
     public void ResetColorState()
     {
-        colorState = Helper.ColorStates.None;
+        colorState = 0;
     }
 }

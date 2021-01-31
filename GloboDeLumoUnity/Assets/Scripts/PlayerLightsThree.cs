@@ -78,7 +78,7 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
 
     public void ResetColorState()
     {
-        colorState = Helper.ColorStates.None;
+        colorState = 0;
     }
 
     // Start is called before the first frame update
