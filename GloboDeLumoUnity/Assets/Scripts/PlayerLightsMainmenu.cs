@@ -52,7 +52,7 @@ public class PlayerLightsMainmenu : MonoBehaviour, IPlayerLightLevelController
 
     public Helper.ColorStates GetColorState()
     {
-        return Helper.ColorStates.None;
+        return 0;
     }
 
     public void ResetColorState()

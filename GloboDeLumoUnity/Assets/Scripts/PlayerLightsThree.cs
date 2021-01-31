@@ -190,7 +190,7 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
                 if (colorState.HasFlag(Helper.ColorStates.HasGreen | Helper.ColorStates.HasBlue))
                 {
                     BaseLight.GetComponent<Light>().color = Color.white;
-                    colorState = Helper.ColorStates.None;
+                    colorState = 0;
                 }
                 else if (colorState.HasFlag(Helper.ColorStates.HasGreen))
                 {
@@ -212,7 +212,7 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
                 if (colorState.HasFlag(Helper.ColorStates.HasRed | Helper.ColorStates.HasBlue))
                 {
                     BaseLight.GetComponent<Light>().color = Color.white;
-                    colorState = Helper.ColorStates.None;
+                    colorState = 0;
                 }
                 else if (colorState.HasFlag(Helper.ColorStates.HasRed))
                 {
@@ -235,7 +235,7 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
                 if (colorState.HasFlag(Helper.ColorStates.HasGreen | Helper.ColorStates.HasRed))
                 {
                     BaseLight.GetComponent<Light>().color = Color.white;
-                    colorState = Helper.ColorStates.None;
+                    colorState = 0;
                 }
                 else if (colorState.HasFlag(Helper.ColorStates.HasGreen))
                 {
