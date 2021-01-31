@@ -49,4 +49,9 @@ public class PlayerLightsMainmenu : MonoBehaviour, IPlayerLightLevelController
             yield return null;
         }
     }
+
+    public Helper.ColorStates GetColorState()
+    {
+        return Helper.ColorStates.None;
+    }
 }

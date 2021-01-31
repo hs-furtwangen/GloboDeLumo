@@ -585,6 +585,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   BeatIntensityVariance: 1
+  BlockersOnStartup: []
+  BlockersOnShutdown: []
 --- !u!114 &1162777862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,6 +609,8 @@ MonoBehaviour:
   active: 0
   colorState: 0
   BeatIntensityVariance: 1
+  BlockersOnStartup: []
+  BlockersOnShutdown: []
 --- !u!114 &2177216276081195590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,6 +634,11 @@ MonoBehaviour:
   rotate: 0
   colorState: 0
   BeatIntensityVariance: 1
+  BlockersOnStartup:
+  - {fileID: 0}
+  - {fileID: 0}
+  BlockersOnShutdown:
+  - {fileID: 0}
 --- !u!114 &789232851
 MonoBehaviour:
   m_ObjectHideFlags: 0

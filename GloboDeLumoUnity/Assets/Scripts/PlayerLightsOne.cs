@@ -29,6 +29,9 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
     public float BeatIntensityVariance;
     private float BeatIntensity;
 
+    public GameObject[] BlockersOnStartup;
+    public GameObject[] BlockersOnShutdown;
+
     private LevelDj levelDj;
 
     public void Beat()
@@ -133,6 +136,15 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
             active = true;
 
             levelDj.StartSongForLevel(1);
+
+            if (BlockersOnStartup.Length != 0)
+            {
+                foreach (var block in BlockersOnStartup)
+                {
+                    if (block != null)
+                        block.transform.position = Vector3.zero;
+                }
+            }
         }
     }
 
@@ -144,6 +156,15 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
             active = false;
 
             levelDj.FadeOutCurrentSong();
+
+            if (BlockersOnShutdown.Length != 0)
+            {
+                foreach (var block in BlockersOnShutdown)
+                {
+                    if (block != null)
+                        block.transform.position = Vector3.zero;
+                }
+            }
         }
     }
 
@@ -166,5 +187,8 @@ public class PlayerLightsOne : MonoBehaviour, IBeatObject, IPlayerLightLevelCont
         }
     }
 
-
+    public Helper.ColorStates GetColorState()
+    {
+        return colorState;
+    }
 }

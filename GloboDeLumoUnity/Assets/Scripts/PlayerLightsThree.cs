@@ -18,12 +18,15 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
     public bool active;
     public bool rotate;
 
-        public Helper.ColorStates colorState;
+    public Helper.ColorStates colorState;
 
     private float BaseIntensity = 2;
     public float BeatIntensityVariance;
     private float BeatIntensity1;
     private float BeatIntensity2;
+
+    public GameObject[] BlockersOnStartup;
+    public GameObject[] BlockersOnShutdown;
 
     private LevelDj levelDj;
 
@@ -35,6 +38,15 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
             BaseLight.GetComponent<Light>().intensity = 0;
 
             levelDj.FadeOutCurrentSong();
+
+            if (BlockersOnStartup.Length != 0)
+            {
+                foreach (var block in BlockersOnStartup)
+                {
+                    if (block != null)
+                        block.transform.position = Vector3.zero;
+                }
+            }
         }
     }
 
@@ -47,7 +59,21 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
             active = true;
 
             levelDj.StartSongForLevel(3);
+
+            if (BlockersOnShutdown.Length != 0)
+            {
+                foreach (var block in BlockersOnShutdown)
+                {
+                    if (block != null)
+                        block.transform.position = Vector3.zero;
+                }
+            }
         }
+    }
+
+    public Helper.ColorStates GetColorState()
+    {
+        return colorState;
     }
 
     // Start is called before the first frame update
