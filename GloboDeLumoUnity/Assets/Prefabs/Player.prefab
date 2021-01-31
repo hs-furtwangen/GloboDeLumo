@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 1162777862}
   - component: {fileID: 2177216276081195590}
   - component: {fileID: 789232851}
+  - component: {fileID: 1466968466}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -469,6 +470,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  SoundTrigger: {fileID: 0}
 --- !u!114 &1848546734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +654,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatDetection: {fileID: 0}
+--- !u!81 &1466968466
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135914956080131112}
+  m_Enabled: 1
 --- !u!1 &3135914956678253190
 GameObject:
   m_ObjectHideFlags: 0

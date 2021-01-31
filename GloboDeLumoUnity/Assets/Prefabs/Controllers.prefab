@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 644280781}
   - component: {fileID: 644280784}
-  - component: {fileID: 644280783}
   - component: {fileID: 644280782}
   - component: {fileID: 466529644}
   m_Layer: 0
@@ -47,14 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatMode: 0
---- !u!81 &644280783
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644280780}
-  m_Enabled: 1
 --- !u!82 &644280782
 AudioSource:
   m_ObjectHideFlags: 0
