@@ -2324,6 +2324,18 @@ PrefabInstance:
       propertyPath: Loop
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5497240668021967280, guid: b943db91015195e49beb34dfb7601f12, type: 3}
+      propertyPath: m_Volume
+      value: 0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 5497240668021967280, guid: b943db91015195e49beb34dfb7601f12, type: 3}
+      propertyPath: MaxDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754044095837632348, guid: b943db91015195e49beb34dfb7601f12, type: 3}
+      propertyPath: MaxDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6669252192094036349, guid: b943db91015195e49beb34dfb7601f12, type: 3}
       propertyPath: m_Range
       value: 3.35
