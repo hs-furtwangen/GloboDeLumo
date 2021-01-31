@@ -20,7 +20,7 @@ public class PlayerLightsThree : MonoBehaviour, IPlayerLightLevelController, IBe
 
     public Helper.ColorStates colorState;
 
-    private float BaseIntensity = 2;
+    private float BaseIntensity = 4;
     public float BeatIntensityVariance;
     private float BeatIntensity1;
     private float BeatIntensity2;
