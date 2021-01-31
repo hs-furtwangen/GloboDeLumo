@@ -13,6 +13,8 @@ public class PlayerLightsMainmenu : MonoBehaviour, IPlayerLightLevelController
     public AnimationCurve StartupRotX;
     public AnimationCurve StartupRotZ;
 
+    public GameObject SoundTrigger;
+
     private LevelDj levelDj;
 
     public void Start()
@@ -59,4 +61,16 @@ public class PlayerLightsMainmenu : MonoBehaviour, IPlayerLightLevelController
     {
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "LevelTrigger")
+        {
+            if (other.gameObject == SoundTrigger)
+            {
+                GameObject.FindGameObjectWithTag("SoundController").gameObject.GetComponent<LevelDj>().StartSongForLevel(0);
+            }
+        }
+    }
+
 }
